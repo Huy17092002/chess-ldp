@@ -5,7 +5,7 @@ import Hero from "./components/Hero.vue";
 import Rules from "./components/Rules.vue";
 import RegisterGuide from "./components/RegisterGuide.vue";
 import Awards from "./components/Awards.vue";
-import Sponsors from "./components/Sponsors.vue";
+// import Sponsors from "./components/Sponsors.vue";
 import Footer from "./components/Footer.vue";
 </script>
 
@@ -15,6 +15,6 @@ import Footer from "./components/Footer.vue";
   <Rules />
   <RegisterGuide />
   <Awards />
-  <Sponsors />
+  <!-- <Sponsors /> -->
   <Footer />
 </template>

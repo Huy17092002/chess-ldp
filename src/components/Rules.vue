@@ -1,83 +1,92 @@
 <template>
-  <section class="mt-[670px]">
-    <div class="max-w-[1228px] mx-auto">
+  <section
+    class="mt-[660px] [@media(min-width:320px)_and_(max-width:342px)]:mt-[740px] [@media(min-width:343px)_and_(max-width:372px)]:mt-[700px] [@media(min-width:373px)_and_(max-width:416px)]:mt-[660px] [@media(min-width:417px)_and_(max-width:444px)]:mt-[620px] [@media(min-width:445px)_and_(max-width:469px)]:mt-[600px] [@media(min-width:470px)_and_(max-width:502px)]:mt-[570px] [@media(min-width:503px)_and_(max-width:544px)]:mt-[550px] [@media(min-width:545px)_and_(max-width:639px)]:mt-[520px] [@media(min-width:640px)_and_(max-width:760px)]:mt-[620px] md:mt-[770px] lg:mt-[410px] xl:mt-[560px]"
+  >
+    <div class="max-w-[1228px] mx-auto px-4">
+      <!-- TITLE -->
       <div class="flex flex-col items-center">
         <h1 class="text-[40px] font-bold text-[#333E53]">Thể lệ</h1>
         <div class="h-[6px] w-[80px] bg-[#F26E33] rounded mb-10"></div>
       </div>
 
-      <div class="flex gap-6">
+      <!-- WRAPPER -->
+      <div class="flex flex-col lg:flex-row gap-6">
         <!-- LEFT CARD -->
         <div
-          class="w-[41%] bg-[#FFEDE9] p-8 rounded-3xl h-[437px] flex flex-col"
+          class="w-full lg:w-[41%] bg-[#FFEDE9] p-6 lg:p-8 rounded-3xl lg:h-[437px] flex flex-col"
         >
           <!-- Title -->
           <p
-            class="font-semibold text-[24px] mb-4 flex items-center gap-2 text-[#862208]"
+            class="font-semibold text-[20px] lg:text-[24px] mb-4 flex items-center gap-2 text-[#862208]"
           >
             <img
               src="/src/assets/Group 784.svg"
               alt="icon"
-              class="w-[40px] h-[40px] object-contain"
+              class="w-[32px] h-[32px] lg:w-[40px] lg:h-[40px]"
             />
             Các bảng đấu
           </p>
 
           <!-- Content -->
-          <div class="flex items-center h-full">
+          <div class="flex flex-col sm:flex-row items-center h-full">
             <!-- Chess Image -->
             <img
               src="/src/assets/image/tuong.png"
               alt="Chess"
-              class="w-[147px] h-[337px] object-contain"
+              class="w-[100px] sm:w-[120px] lg:w-[147px] object-contain"
             />
 
             <!-- List -->
-            <div class="flex flex-col gap-1 w-full">
+            <div class="flex flex-col gap-2 w-full">
               <div
-                class="bg-[#F58A5C] px-4 py-2 text-white rounded-lg text-sm w-[215px] h-[49px] flex items-center"
+                class="bg-[#F58A5C] px-4 py-2 text-white rounded-lg text-sm w-full xl:w-[215px]"
               >
                 BẢNG 1: Lớp 1+2
               </div>
+
               <div
-                class="bg-[#EB7044] px-4 py-2 text-white rounded-lg text-sm w-[231px] h-[49px] flex items-center"
+                class="bg-[#EB7044] px-4 py-2 text-white rounded-lg text-sm w-full xl:w-[231px]"
               >
                 BẢNG 2: Lớp 3+4
               </div>
+
               <div
-                class="bg-[#E15B33] px-4 py-2 text-white rounded-lg text-sm w-[247px] h-[49px] flex items-center"
+                class="bg-[#E15B33] px-4 py-2 text-white rounded-lg text-sm w-full xl:w-[247px]"
               >
                 BẢNG 3: Lớp 5
               </div>
+
               <div
-                class="bg-[#C94923] px-4 py-2 text-white rounded-lg text-sm w-[263px] h-[49px] flex items-center"
+                class="bg-[#C94923] px-4 py-2 text-white rounded-lg text-sm w-full xl:w-[263px]"
               >
                 BẢNG 4: Lớp 6
               </div>
+
               <div
-                class="bg-[#A63613] px-4 py-2 text-white rounded-lg text-sm w-[279px] h-[49px] flex items-center"
+                class="bg-[#A63613] px-4 py-2 text-white rounded-lg text-sm w-full xl:w-[279px]"
               >
                 BẢNG 5: 7
               </div>
+
               <div
-                class="bg-[#7A1F0A] px-4 py-2 text-white rounded-lg text-sm w-[295px] h-[49px] flex items-center"
+                class="bg-[#7A1F0A] px-4 py-2 text-white rounded-lg text-sm w-full xl:w-[295px]"
               >
                 BẢNG 6: Lớp 8+9
               </div>
             </div>
           </div>
         </div>
+
         <!-- RIGHT CARD -->
         <div
-          class="w-[58%] p-8 rounded-3xl h-[437px] relative overflow-hidden bg-[#D7E2FF]"
+          class="w-full lg:w-[58%] p-6 lg:p-8 rounded-3xl lg:h-[437px] relative overflow-hidden bg-[#D7E2FF]"
         >
-          <!-- Background pattern -->
+          <!-- Background -->
           <div
-            class="absolute top-0 right-0 w-[707px] h-[436px] bg-no-repeat"
+            class="absolute top-0 right-0 w-full lg:w-[707px] h-full bg-no-repeat"
             style="
               background: transparent
-                url(&quot;/src/assets/image/Mask.png&quot;) 0% 0% no-repeat
-                padding-box;
+                url(&quot;/src/assets/image/Mask.png&quot;) no-repeat;
               background-size: cover;
             "
           ></div>
@@ -85,17 +94,19 @@
           <!-- Content -->
           <div class="relative z-10 h-full flex flex-col">
             <p
-              class="font-semibold text-[24px] mb-4 flex items-center gap-2 text-[#1F304F]"
+              class="font-semibold text-[20px] lg:text-[24px] mb-4 flex items-center gap-2 text-[#1F304F]"
             >
               <img
                 src="/src/assets/Group 783.svg"
                 alt="icon"
-                class="w-[40px] h-[40px] object-contain"
+                class="w-[32px] h-[32px] lg:w-[40px] lg:h-[40px]"
               />
               Nội dung thi đấu
             </p>
 
-            <p class="text-[#333E53] text-[20px] font-semibold leading-10">
+            <p
+              class="text-[#333E53] text-[16px] lg:text-[20px] font-semibold leading-7 lg:leading-10"
+            >
               Tranh giải cá nhân nam, cá nhân nữ môn cờ vua
               <br />Vòng loại sẽ thi đấu online 7 ván, thời gian mỗi bên 10 phút
               <br />Sau khi kết thúc vòng loại, các học sinh vào vòng trong sẽ
@@ -104,7 +115,7 @@
               thời gian mỗi bên 10 phút, thi đấu online tại trường học.
             </p>
 
-            <div class="mt-auto flex justify-end">
+            <div class="mt-6 lg:mt-auto flex justify-center lg:justify-end">
               <button
                 class="bg-gradient-to-r from-[#1A2433] via-[#2E3A4D] to-[#6C7B95] text-white px-6 py-2 rounded-lg text-sm font-medium hover:shadow-lg transition h-[47px] w-[147px]"
               >

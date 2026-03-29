@@ -1,5 +1,5 @@
 <template>
-  <section class="py-6">
+  <section class="py-6 px-4 sm:px-6">
     <div class="max-w-[1228px] mx-auto text-center">
       <!-- Title -->
       <div class="flex flex-col items-center">
@@ -8,22 +8,22 @@
       </div>
 
       <!-- Cards -->
-      <div class="grid grid-cols-4 gap-6">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 justify-items-center"
+      >
         <!-- Card 1 -->
         <div
-          class="w-[295px] h-[327px] bg-white rounded-2xl shadow p-8 border-2 border-[#D94826] relative overflow-hidden shadow-[0_10px_30px_rgba(249,115,22,0.25)]"
+          class="w-full max-w-[295px] h-[327px] bg-white rounded-2xl p-8 border-2 border-[#D94826] relative overflow-hidden shadow-[0_10px_30px_rgba(249,115,22,0.25)]"
         >
-          <!-- Background icon (mờ phía sau) -->
           <img
             src="/src/assets/Path 12302.svg"
             class="absolute top-[-0.75rem] right-[-1.5rem] w-[100px] opacity-10"
           />
 
-          <!-- Icon -->
           <div
             class="w-[80px] h-[80px] mx-auto mb-4 flex items-center justify-center bg-[#FFDAD2] rounded-full"
           >
-            <img src="/src/assets/Path 12302.svg" alt="icon" class="w-8 h-8" />
+            <img src="/src/assets/Path 12302.svg" class="w-8 h-8" />
           </div>
 
           <div class="text-gray-700 text-sm font-semibold mb-1">
@@ -42,23 +42,17 @@
 
         <!-- Card 2 -->
         <div
-          class="w-[295px] h-[327px] bg-white rounded-2xl shadow p-8 border-2 border-[#333E53] relative overflow-hidden shadow-[0_15px_40px_rgba(78,94,127,0.28)]"
+          class="w-full max-w-[295px] h-[327px] bg-white rounded-2xl p-8 border-2 border-[#333E53] relative overflow-hidden shadow-[0_15px_40px_rgba(78,94,127,0.28)]"
         >
-          <!-- Background icon (mờ phía sau) -->
           <img
             src="/src/assets/Component 63 – 2.svg"
             class="absolute top-[-0.75rem] right-[-1.5rem] w-[80px] opacity-10"
           />
 
-          <!-- Icon -->
           <div
             class="w-[80px] h-[80px] mx-auto mb-4 flex items-center justify-center bg-[#F1F5F9] rounded-full"
           >
-            <img
-              src="/src/assets/Component 63 – 2.svg"
-              alt="icon"
-              class="w-8 h-8"
-            />
+            <img src="/src/assets/Component 63 – 2.svg" class="w-8 h-8" />
           </div>
 
           <div class="text-[#333E53] text-sm font-semibold mb-1">
@@ -77,23 +71,17 @@
 
         <!-- Card 3 -->
         <div
-          class="w-[295px] h-[327px] bg-white rounded-2xl shadow p-8 border-2 border-[#CD7F32] relative overflow-hidden shadow-[0_12px_35px_rgba(234,88,12,0.35)]"
+          class="w-full max-w-[295px] h-[327px] bg-white rounded-2xl p-8 border-2 border-[#CD7F32] relative overflow-hidden shadow-[0_12px_35px_rgba(234,88,12,0.35)]"
         >
-          <!-- Background icon (mờ phía sau) -->
           <img
             src="/src/assets/Component 65 – 1.svg"
             class="absolute top-[-0.75rem] right-[-1.5rem] w-[80px] opacity-10"
           />
 
-          <!-- Icon -->
           <div
             class="w-[80px] h-[80px] mx-auto mb-4 flex items-center justify-center bg-[#FFF7ED] rounded-full"
           >
-            <img
-              src="/src/assets/Component 65 – 1.svg"
-              alt="icon"
-              class="w-8 h-8"
-            />
+            <img src="/src/assets/Component 65 – 1.svg" class="w-8 h-8" />
           </div>
 
           <div class="text-[#333E53] text-sm font-semibold mb-1">
@@ -112,19 +100,17 @@
 
         <!-- Card 4 -->
         <div
-          class="w-[295px] h-[327px] bg-white rounded-2xl shadow p-8 border-2 border-[#3E6560] relative overflow-hidden shadow-[0_10px_30px_rgba(62,101,96,0.35)]"
+          class="w-full max-w-[295px] h-[327px] bg-white rounded-2xl p-8 border-2 border-[#3E6560] relative overflow-hidden shadow-[0_10px_30px_rgba(62,101,96,0.35)]"
         >
-          <!-- Background icon (mờ phía sau) -->
           <img
             src="/src/assets/Path 12312.svg"
             class="absolute top-[-0.75rem] right-[-1.5rem] w-[100px] opacity-10"
           />
 
-          <!-- Icon -->
           <div
             class="w-[80px] h-[80px] mx-auto mb-4 flex items-center justify-center bg-[#CEF9F2] rounded-full"
           >
-            <img src="/src/assets/Path 12312.svg" alt="icon" class="w-8 h-8" />
+            <img src="/src/assets/Path 12312.svg" class="w-8 h-8" />
           </div>
 
           <div class="text-[#333E53] text-sm font-semibold mb-1">
