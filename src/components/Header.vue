@@ -1,17 +1,31 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
+import { isLogin, logout } from "../stores/auth";
+
+const active = ref("");
 
 const isOpen = ref(false);
+const profileOpen = ref(false);
+
 const menuRef = ref(null);
+const profileRef = ref(null);
 
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
 };
 
-// đóng khi click ngoài
+const toggleProfile = () => {
+  profileOpen.value = !profileOpen.value;
+};
+
+// click outside
 const handleClickOutside = (e) => {
   if (menuRef.value && !menuRef.value.contains(e.target)) {
     isOpen.value = false;
+  }
+
+  if (profileRef.value && !profileRef.value.contains(e.target)) {
+    profileOpen.value = false;
   }
 };
 
@@ -29,82 +43,207 @@ onBeforeUnmount(() => {
     class="absolute top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md"
   >
     <div
-      class="max-w-[1440px] xl:max-w-[1280px] lg:max-w-[1024px] md:max-w-[768px] sm:max-w-full mx-auto flex items-center justify-between px-6 md:px-8 lg:px-10 py-2"
+      class="max-w-[1440px] xl:max-w-[1280px] sm:max-w-full mx-auto flex items-center justify-between px-6 md:px-8 lg:px-10 py-2"
     >
       <!-- Logo -->
       <div class="flex items-center">
         <img
           src="/src/assets/Group 703.svg"
           alt="Đấu trường cờ vua"
-          class="w-[145px] h-[58px] object-contain lg:w-[130px] lg:h-[52px] md:w-[110px] md:h-[45px] sm:w-[95px] sm:h-[40px]"
+          class="w-[145px] h-[58px] object-contain"
         />
       </div>
 
-      <!-- Menu Desktop -->
-      <nav
-        class="hidden md:flex items-center gap-8 xl:gap-6 lg:gap-5 text-gray-700"
-      >
-        <a href="#" class="text-[16px] lg:text-[15px] font-bold">Giới thiệu</a>
-        <a href="#" class="text-[16px] lg:text-[15px] font-bold"
-          >Hướng dẫn đăng ký</a
-        >
-        <a href="#" class="text-[16px] lg:text-[15px] font-bold"
-          >Cơ cấu giải thưởng</a
-        >
-        <a href="#" class="text-[16px] lg:text-[15px] font-bold">Thể lệ</a>
-        <a href="#" class="text-[16px] lg:text-[15px] font-bold">Nhà tài trợ</a>
+      <nav class="hidden md:flex items-center gap-8 text-gray-700 font-bold">
+        <!-- Giới thiệu -->
+        <div class="flex flex-col items-center">
+          <router-link
+            to="/"
+            @click.prevent="active = 'gioi-thieu'"
+            :class="
+              active === 'gioi-thieu'
+                ? 'text-[#F36B2A]'
+                : 'hover:text-[#F36B2A]'
+            "
+          >
+            Giới thiệu
+          </router-link>
+          <div
+            v-if="active === 'gioi-thieu'"
+            class="h-[2px] w-[60px] bg-[#F26E33] rounded"
+          ></div>
+        </div>
+
+        <!-- Hướng dẫn -->
+        <div class="flex flex-col items-center">
+          <a
+            href="#"
+            @click.prevent="active = 'huong-dan'"
+            :class="
+              active === 'huong-dan' ? 'text-[#F36B2A]' : 'hover:text-[#F36B2A]'
+            "
+          >
+            Hướng dẫn đăng ký
+          </a>
+          <div
+            v-if="active === 'huong-dan'"
+            class="h-[2px] w-[60px] bg-[#F26E33] rounded"
+          ></div>
+        </div>
+
+        <!-- Giải thưởng -->
+        <div class="flex flex-col items-center">
+          <a
+            href="#"
+            @click.prevent="active = 'giai-thuong'"
+            :class="
+              active === 'giai-thuong'
+                ? 'text-[#F36B2A]'
+                : 'hover:text-[#F36B2A]'
+            "
+          >
+            Cơ cấu giải thưởng
+          </a>
+          <div
+            v-if="active === 'giai-thuong'"
+            class="h-[2px] w-[60px] bg-[#F26E33] rounded"
+          ></div>
+        </div>
+
+        <!-- Thể lệ -->
+        <div class="flex flex-col items-center">
+          <a
+            href="#"
+            @click.prevent="active = 'the-le'"
+            :class="
+              active === 'the-le' ? 'text-[#F36B2A]' : 'hover:text-[#F36B2A]'
+            "
+          >
+            Thể lệ
+          </a>
+          <div
+            v-if="active === 'the-le'"
+            class="h-[2px] w-[60px] bg-[#F26E33] rounded"
+          ></div>
+        </div>
+
+        <!-- Tài trợ -->
+        <div class="flex flex-col items-center">
+          <a
+            href="#"
+            @click.prevent="active = 'tai-tro'"
+            :class="
+              active === 'tai-tro' ? 'text-[#F36B2A]' : 'hover:text-[#F36B2A]'
+            "
+          >
+            Nhà tài trợ
+          </a>
+          <div
+            v-if="active === 'tai-tro'"
+            class="h-[2px] w-[60px] bg-[#F26E33] rounded"
+          ></div>
+        </div>
       </nav>
 
-      <!-- Right side -->
+      <!-- Right -->
       <div class="flex items-center gap-3">
-        <!-- Button -->
-        <button
-          class="hidden sm:block w-[147px] h-[47px] lg:w-[130px] lg:h-[42px] md:w-[120px] md:h-[40px] text-white rounded-lg bg-gradient-to-r from-[#D84315] to-[#F36B2A] shadow-md"
-        >
-          Đăng nhập
-        </button>
+        <!-- CHƯA LOGIN -->
+        <router-link v-if="!isLogin" to="/login">
+          <button
+            class="hidden sm:block w-[147px] h-[47px] text-white rounded-lg bg-gradient-to-r from-[#D84315] to-[#F36B2A]"
+            ref="profileRef"
+            @click.stop="
+              () => {
+                toggleProfile();
+                active = '';
+              }
+            "
+          >
+            Đăng nhập
+          </button>
+        </router-link>
 
-        <!-- Mobile menu button -->
-        <button class="md:hidden z-50" @click.stop="toggleMenu">
-          <span v-if="isOpen" class="text-2xl">✕</span>
-          <span v-else>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-7 h-7 text-gray-800"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+        <!-- ĐÃ LOGIN -->
+        <div v-else class="relative hidden md:block" ref="profileRef">
+          <button
+            @click.stop="
+              () => {
+                toggleProfile();
+                active = '';
+              }
+            "
+          >
+            <img
+              src="/src/assets/Mask Group 10428.svg"
+              class="w-10 h-10 rounded-full border"
+            />
+          </button>
+
+          <!-- dropdown -->
+          <div
+            v-if="profileOpen"
+            class="absolute right-0 mt-2 w-44 bg-white shadow-lg rounded-lg"
+          >
+            <router-link
+              to="/personal-card"
+              class="block w-full text-left px-4 py-2 hover:bg-gray-100 text-black"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </span>
-        </button>
+              Hồ sơ
+            </router-link>
+
+            <button
+              @click="logout"
+              class="block w-full text-left px-4 py-2 text-red-500 hover:bg-gray-100"
+            >
+              Đăng xuất
+            </button>
+          </div>
+        </div>
+
+        <!-- mobile btn -->
+        <button class="md:hidden" @click.stop="toggleMenu">☰</button>
       </div>
     </div>
 
-    <!-- Mobile Menu -->
+    <!-- Mobile menu -->
     <transition name="menu">
-      <div
-        v-if="isOpen"
-        ref="menuRef"
-        class="md:hidden bg-white shadow-lg px-6 py-4 space-y-4"
-      >
-        <a href="#" class="block font-bold text-gray-700">Giới thiệu</a>
+      <div v-if="isOpen" ref="menuRef" class="md:hidden bg-white p-4 space-y-4">
+        <a href="#" class="block font-bold">Giới thiệu</a>
         <a href="#" class="block font-bold text-gray-700">Hướng dẫn đăng ký</a>
         <a href="#" class="block font-bold text-gray-700">Cơ cấu giải thưởng</a>
         <a href="#" class="block font-bold text-gray-700">Thể lệ</a>
         <a href="#" class="block font-bold text-gray-700">Nhà tài trợ</a>
 
-        <button
-          class="w-full h-[44px] text-white rounded-lg bg-gradient-to-r from-[#D84315] to-[#F36B2A]"
-        >
-          Đăng nhập
-        </button>
+        <router-link v-if="!isLogin" to="/login">
+          <button class="w-full bg-orange-500 text-white py-2 rounded">
+            Đăng nhập
+          </button>
+        </router-link>
+
+        <div v-else class="flex items-center gap-3">
+          <!-- Avatar -->
+          <img
+            src="/src/assets/Mask Group 10428.svg"
+            class="w-10 h-10 rounded-full border"
+          />
+
+          <!-- Info + actions -->
+          <div class="flex flex-col w-full">
+            <router-link
+              to="/personal-card"
+              class="text-left font-medium hover:text-[#F36B2A]"
+            >
+              Hồ sơ
+            </router-link>
+
+            <button
+              @click="logout"
+              class="text-left text-red-500 hover:text-red-600"
+            >
+              Đăng xuất
+            </button>
+          </div>
+        </div>
       </div>
     </transition>
   </header>
@@ -115,14 +254,20 @@ onBeforeUnmount(() => {
 .menu-leave-active {
   transition: all 0.25s ease;
 }
-
-.menu-enter-from {
+.menu-enter-from,
+.menu-leave-to {
   opacity: 0;
   transform: translateY(-10px);
 }
 
-.menu-leave-to {
+/* dropdown animation */
+.fade-enter-active,
+.fade-leave-active {
+  transition: 0.2s;
+}
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 </style>

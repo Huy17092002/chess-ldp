@@ -4,7 +4,7 @@
       <!-- Title -->
       <div class="flex flex-col items-center">
         <h1
-          class="text-[32px] md:text-[36px] xl:text-[40px] font-bold text-[#333E53]"
+          class="font-montserrat text-[32px] md:text-[36px] xl:text-[40px] font-bold text-[#333E53]"
         >
           Hướng dẫn đăng ký
         </h1>
@@ -12,7 +12,7 @@
       </div>
 
       <!-- Text -->
-      <p class="text-base md:text-lg mb-4">
+      <p class="font-montserrat text-base md:text-lg mb-4">
         <span class="font-bold text-[#333E53]">Bước 1:</span>
         Click vào “Đăng ký dự thi” tại Trang chủ.
       </p>

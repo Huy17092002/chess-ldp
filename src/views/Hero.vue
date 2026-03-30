@@ -5,7 +5,7 @@
     style="background-image: url(&quot;/src/assets/image/bg_chess.png&quot;)"
   >
     <div
-      class="max-w-[1920px] mx-auto px-4 sm:px-6 md:px-10 xl:pl-[346px] py-24 md:py-32 xl:py-[14rem] flex items-center"
+      class="max-w-[1270px] mx-auto px-4 sm:px-6 md:px-[2rem] py-24 md:py-32 xl:py-[14rem] flex items-center"
     >
       <div class="w-full max-w-xl">
         <!-- LOGO -->
@@ -20,7 +20,10 @@
           class="font-montserrat font-extrabold text-3xl sm:text-4xl xl:text-5xl text-gray-800 leading-tight"
         >
           GIẢI CỜ VUA <br />
-          <span class="text-orange-500">BÁO GIÁO DỤC VÀ THỜI ĐẠI</span>
+          <span
+            class="font-montserrat font-extrabold text-orange-500 leading-[1.4]"
+            >BÁO GIÁO DỤC VÀ THỜI ĐẠI</span
+          >
           2026
         </h1>
 
@@ -28,7 +31,9 @@
         <div
           class="w-full max-w-[521px] bg-white/80 backdrop-blur mt-6 md:mt-8 px-4 md:px-6 py-4 rounded-2xl shadow text-center"
         >
-          <p class="text-sm md:text-base text-[#333E53] mb-3 font-semibold">
+          <p
+            class="text-sm md:text-base text-[#333E53] mb-3 font-montserrat font-semibold"
+          >
             THỜI GIAN ĐĂNG KÝ CÒN LẠI (HẾT NGÀY 28/4)
           </p>
 
@@ -62,22 +67,22 @@
         </div>
 
         <!-- BUTTON -->
-        <button
-          class="mt-6 text-white px-5 md:px-6 py-2.5 md:py-3 rounded-lg font-semibold bg-gradient-to-r from-[#D84315] to-[#F36B2A] shadow-md"
-        >
-          Đăng ký dự thi
-        </button>
+        <router-link to="/register">
+          <button
+            class="mt-6 text-white px-5 md:px-6 py-2.5 md:py-3 rounded-lg font-semibold bg-gradient-to-r from-[#D84315] to-[#F36B2A] shadow-md"
+          >
+            Đăng ký dự thi
+          </button>
+        </router-link>
       </div>
     </div>
   </section>
 
   <!-- CARD (TÁCH RIÊNG KHỎI HERO) -->
-  <section class="w-full bg-[#F5F6FA] py-0">
-    <div
-      class="absolute left-1/2 -translate-x-1/2 -translate-y-[40px] w-full max-w-[1228px] mx-auto px-4"
-    >
+  <section class="relative z-10 w-full -mt-[55px] pb-[30px]">
+    <div class="max-w-[1228px] mx-auto px-4">
       <div
-        class="bg-[#F1F3FF] rounded-2xl shadow p-5 sm:p-6 md:p-8 xl:p-10 flex flex-col-reverse lg:flex-row gap-6 md:gap-8"
+        class="bg-[#D7E2FF] rounded-2xl shadow-xl p-5 sm:p-6 md:p-8 xl:p-10 flex flex-col-reverse lg:flex-row gap-6 md:gap-8"
       >
         <!-- IMAGE -->
         <div class="w-full lg:w-[40%] flex justify-center">
@@ -97,13 +102,13 @@
           </div>
 
           <h2
-            class="font-semibold mb-2 md:mb-3 text-base sm:text-lg md:text-xl xl:text-[32px]"
+            class="font-montserrat font-bold text-[#333E53] xl:leading-[2.75rem] mb-2 md:mb-3 text-base sm:text-lg md:text-xl xl:text-[32px] w-[676px] sm:flex-wrap"
           >
             GIẢI CỜ VUA BÁO GIÁO DỤC VÀ THỜI ĐẠI NĂM 2026
           </h2>
 
           <p
-            class="text-xs sm:text-sm md:text-base xl:text-[20px] leading-relaxed max-w-[600px]"
+            class="font-montserrat text-xs sm:text-sm md:text-base xl:text-[20px] xl:leading-[2rem] max-w-[676px]"
           >
             Giải cờ vua báo giáo dục và thời đại năm 2026 được tổ chức theo hình
             thức thi đấu trực tuyến (online) nhằm cụ thể hoá Đề án “Phát hiện,

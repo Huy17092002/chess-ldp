@@ -3,7 +3,9 @@
     <div class="max-w-[1228px] mx-auto text-center">
       <!-- Title -->
       <div class="flex flex-col items-center">
-        <h1 class="text-[40px] font-bold text-[#333E53]">Cơ cấu giải thưởng</h1>
+        <h1 class="font-montserrat text-[40px] font-bold text-[#333E53]">
+          Cơ cấu giải thưởng
+        </h1>
         <div class="h-[6px] w-[80px] bg-[#F26E33] rounded mb-8"></div>
       </div>
 
@@ -26,15 +28,15 @@
             <img src="/src/assets/Path 12302.svg" class="w-8 h-8" />
           </div>
 
-          <div class="text-gray-700 text-sm font-semibold mb-1">
+          <div class="font-montserrat text-gray-700 text-sm font-semibold mb-1">
             12 GIẢI NHẤT
           </div>
 
-          <div class="text-[28px] font-bold text-orange-500">
-            5.000.000 <span class="text-sm">VND</span>
+          <div class="font-montserrat text-[28px] font-bold text-orange-500">
+            5.000.000 <span class="text-sm align-top">VND</span>
           </div>
 
-          <p class="text-gray-500 text-sm mt-3 leading-relaxed">
+          <p class="font-montserrat text-gray-500 text-sm mt-3 leading-relaxed">
             Bằng khen của Ban tổ chức và Liên đoàn cờ vua Việt Nam, huy chương
             Vàng
           </p>
@@ -55,15 +57,19 @@
             <img src="/src/assets/Component 63 – 2.svg" class="w-8 h-8" />
           </div>
 
-          <div class="text-[#333E53] text-sm font-semibold mb-1">
+          <div
+            class="font-montserrat text-[#333E53] text-sm font-semibold mb-1"
+          >
             24 GIẢI NHÌ
           </div>
 
-          <div class="text-[28px] font-bold text-[#4E5E7F]">
-            3.000.000 <span class="text-sm">VND</span>
+          <div class="font-montserrat text-[28px] font-bold text-[#4E5E7F]">
+            3.000.000 <span class="text-sm align-top">VND</span>
           </div>
 
-          <p class="text-[#333E53] text-sm mt-3 leading-relaxed">
+          <p
+            class="font-montserrat text-[#333E53] text-sm mt-3 leading-relaxed"
+          >
             Bằng khen của Ban tổ chức và Liên đoàn cờ vua Việt Nam, huy chương
             Bạc
           </p>
@@ -84,15 +90,19 @@
             <img src="/src/assets/Component 65 – 1.svg" class="w-8 h-8" />
           </div>
 
-          <div class="text-[#333E53] text-sm font-semibold mb-1">
+          <div
+            class="font-montserrat text-[#333E53] text-sm font-semibold mb-1"
+          >
             36 GIẢI BA
           </div>
 
-          <div class="text-[28px] font-bold text-[#CD7F32]">
-            1.000.000 <span class="text-sm">VND</span>
+          <div class="font-montserrat text-[28px] font-bold text-[#CD7F32]">
+            1.000.000 <span class="text-base align-top">VND</span>
           </div>
 
-          <p class="text-[#333E53] text-sm mt-3 leading-relaxed">
+          <p
+            class="font-montserrat text-[#333E53] text-sm mt-3 leading-relaxed"
+          >
             Bằng khen của Ban tổ chức và Liên đoàn cờ vua Việt Nam, huy chương
             Đồng
           </p>
@@ -113,15 +123,19 @@
             <img src="/src/assets/Path 12312.svg" class="w-8 h-8" />
           </div>
 
-          <div class="text-[#333E53] text-sm font-semibold mb-1">
+          <div
+            class="font-montserrat text-[#333E53] text-sm font-semibold mb-1"
+          >
             60 GIẢI KHUYẾN KHÍCH
           </div>
 
-          <div class="text-[28px] font-bold text-[#3E6560]">
-            500.000 <span class="text-sm">VND</span>
+          <div class="font-montserrat text-[28px] font-bold text-[#3E6560]">
+            500.000 <span class="text-sm align-top">VND</span>
           </div>
 
-          <p class="text-[#333E53] text-sm mt-3 leading-relaxed">
+          <p
+            class="font-montserrat text-[#333E53] text-sm mt-3 leading-relaxed"
+          >
             Kỷ niệm chương của Ban tổ chức và Liên đoàn cờ vua Việt Nam
           </p>
         </div>
