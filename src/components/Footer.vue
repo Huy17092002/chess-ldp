@@ -1,21 +1,25 @@
 <template>
-  <div class="flex">
+  <div class="w-full h-[6px] relative overflow-hidden">
+    <div class="absolute left-0 top-0 h-full w-[31%] bg-[#CDF2EB]"></div>
     <div
-      class="h-[6px] w-[33%] bg-[#CDF2EB]"
-      style="clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%)"
+      class="absolute top-0 h-full bg-[#F26E33]"
+      style="
+        left: calc(31% - 12px);
+        width: calc(69% + 12px);
+        clip-path: polygon(12px 0, 100% 0, 100% 100%, 0 100%);
+      "
     ></div>
-    <div class="h-[6px] w-[70%] bg-[#F26E33] -ml-[20px]"></div>
   </div>
   <footer class="bg-[#f3f5f9] pt-2 border-t-4">
     <div
-      class="max-w-[1228px] mx-auto px-4 md:px-6 lg:px-0 flex flex-col md:flex-row xl:flex-nowrap justify-between items-start gap-8 py-10"
+      class="max-w-[1228px] mx-auto px-4 md:px-8 lg:px-12 flex flex-col md:flex-row xl:flex-nowrap justify-between items-start gap-8 py-10"
     >
       <!-- Left: Logo -->
       <div
         class="w-full md:w-[45%] xl:w-auto flex justify-center md:justify-start"
       >
         <img
-          src="/src/assets/Group 703.svg"
+          src="/src/assets/Group703.svg"
           alt="Đấu trường cờ vua"
           class="w-[150px] md:w-[180px] xl:w-[188px] object-contain"
         />
@@ -59,7 +63,7 @@
         <div class="flex gap-3 justify-center md:justify-start mt-2">
           <div>
             <img
-              src="/src/assets/Group 3.svg"
+              src="/src/assets/Group3.svg"
               alt="icon"
               class="w-[30px] h-[30px]"
             />
@@ -67,7 +71,7 @@
 
           <div>
             <img
-              src="/src/assets/Group 1.svg"
+              src="/src/assets/Group1.svg"
               alt="icon"
               class="w-[30px] h-[30px]"
             />

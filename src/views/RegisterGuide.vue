@@ -21,10 +21,10 @@
       <div class="relative flex items-center justify-center">
         <!-- Left Arrow -->
         <button
-          class="absolute left-2 md:left-0 z-10 w-[40px] h-[40px] md:w-[48px] md:h-[48px] flex items-center justify-center bg-white rounded-full shadow hover:scale-105 transition"
+          class="absolute left-2 md:left-0 z-10 md:w-[48px] md:h-[48px] flex items-center justify-center rounded-full shadow hover:scale-105 transition"
         >
           <img
-            src="/src/assets/Icon ion-ios-arrow-dropleft-circle.svg"
+            src="/src/assets/Icon_ion-ios-arrow-dropleft-circle.svg"
             alt="prev"
             class="w-4 h-4 md:w-5 md:h-5"
           />
@@ -41,10 +41,10 @@
 
         <!-- Right Arrow -->
         <button
-          class="absolute right-2 md:right-0 z-10 w-[40px] h-[40px] md:w-[48px] md:h-[48px] flex items-center justify-center bg-white rounded-full shadow hover:scale-105 transition"
+          class="absolute right-2 md:right-0 z-10 w-[40px] h-[40px] md:w-[48px] md:h-[48px] flex items-center justify-center rounded-full shadow hover:scale-105 transition"
         >
           <img
-            src="/src/assets/Icon ion-ios-arrow-dropright-circle.svg"
+            src="/src/assets/Icon_ion-ios-arrow-dropright-circle.svg"
             alt="next"
             class="w-4 h-4 md:w-5 md:h-5"
           />

@@ -10,8 +10,8 @@
       <div class="w-full max-w-xl">
         <!-- LOGO -->
         <div class="flex flex-wrap gap-3 mb-4 items-center">
-          <img class="h-8 md:h-10" src="/src/assets/Logo GD&TĐ-15.svg" />
-          <img class="h-8 md:h-10" src="/src/assets/Logo GD&TĐ-11.svg" />
+          <img class="h-8 md:h-10" src="/src/assets/LogoGD&TĐ-15.svg" />
+          <img class="h-8 md:h-10" src="/src/assets/LogoGD&TĐ-11.svg" />
           <img class="h-8 md:h-10" src="/src/assets/ecoms-19.svg" />
         </div>
 
@@ -68,8 +68,13 @@
 
         <!-- BUTTON -->
         <router-link to="/register">
-          <button
+          <!-- <button
             class="mt-6 text-white px-5 md:px-6 py-2.5 md:py-3 rounded-lg font-semibold bg-gradient-to-r from-[#D84315] to-[#F36B2A] shadow-md"
+          >
+            Đăng ký dự thi
+          </button> -->
+          <button
+            class="mt-6 text-white px-5 md:px-6 py-2.5 md:py-3 rounded-lg font-semibold bg-gradient-to-r from-[#D84315] to-[#F36B2A] shadow-md transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl active:translate-y-0 active:scale-70"
           >
             Đăng ký dự thi
           </button>
@@ -102,7 +107,7 @@
           </div>
 
           <h2
-            class="font-montserrat font-bold text-[#333E53] xl:leading-[2.75rem] mb-2 md:mb-3 text-base sm:text-lg md:text-xl xl:text-[32px] w-[676px] sm:flex-wrap"
+            class="font-montserrat font-bold text-[#333E53] xl:leading-[2.75rem] mb-2 md:mb-3 text-base sm:text-lg md:text-[1.2rem] xl:text-[32px] w-full sm:w-full md:w-[520px] xl:w-[676px] break-words"
           >
             GIẢI CỜ VUA BÁO GIÁO DỤC VÀ THỜI ĐẠI NĂM 2026
           </h2>

@@ -48,7 +48,7 @@ onBeforeUnmount(() => {
       <!-- Logo -->
       <div class="flex items-center">
         <img
-          src="/src/assets/Group 703.svg"
+          src="/src/assets/Group703.svg"
           alt="Đấu trường cờ vua"
           class="w-[145px] h-[58px] object-contain"
         />
@@ -150,7 +150,7 @@ onBeforeUnmount(() => {
         <!-- CHƯA LOGIN -->
         <router-link v-if="!isLogin" to="/login">
           <button
-            class="hidden sm:block w-[147px] h-[47px] text-white rounded-lg bg-gradient-to-r from-[#D84315] to-[#F36B2A]"
+            class="hidden sm:block w-[142px] h-[47px] text-white font-montserrat font-bold rounded-lg bg-gradient-to-r from-[#D84315] to-[#F36B2A] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl active:translate-y-0 active:scale-80"
             ref="profileRef"
             @click.stop="
               () => {
@@ -174,7 +174,7 @@ onBeforeUnmount(() => {
             "
           >
             <img
-              src="/src/assets/Mask Group 10428.svg"
+              src="/src/assets/MaskGroup10428.svg"
               class="w-10 h-10 rounded-full border"
             />
           </button>
@@ -207,8 +207,20 @@ onBeforeUnmount(() => {
 
     <!-- Mobile menu -->
     <transition name="menu">
-      <div v-if="isOpen" ref="menuRef" class="md:hidden bg-white p-4 space-y-4">
-        <a href="#" class="block font-bold">Giới thiệu</a>
+      <div
+        v-if="isOpen"
+        ref="menuRef"
+        class="md:hidden bg-white p-4 space-y-4 font-bold"
+      >
+        <router-link
+          to="/"
+          @click.prevent="active = 'gioi-thieu'"
+          :class="
+            active === 'gioi-thieu' ? 'text-[#F36B2A]' : 'hover:text-[#F36B2A]'
+          "
+        >
+          Giới thiệu
+        </router-link>
         <a href="#" class="block font-bold text-gray-700">Hướng dẫn đăng ký</a>
         <a href="#" class="block font-bold text-gray-700">Cơ cấu giải thưởng</a>
         <a href="#" class="block font-bold text-gray-700">Thể lệ</a>
@@ -223,7 +235,7 @@ onBeforeUnmount(() => {
         <div v-else class="flex items-center gap-3">
           <!-- Avatar -->
           <img
-            src="/src/assets/Mask Group 10428.svg"
+            src="/src/assets/MaskGroup10428.svg"
             class="w-10 h-10 rounded-full border"
           />
 

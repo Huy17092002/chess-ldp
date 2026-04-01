@@ -20,7 +20,7 @@
             class="font-montserrat font-semibold text-[20px] lg:text-[24px] mb-4 flex items-center gap-2 text-[#862208]"
           >
             <img
-              src="/src/assets/Group 784.svg"
+              src="/src/assets/Group784.svg"
               alt="icon"
               class="w-[32px] h-[32px] lg:w-[40px] lg:h-[40px]"
             />
@@ -97,7 +97,7 @@
               class="font-montserrat font-semibold text-[20px] lg:text-[24px] mb-4 flex items-center gap-2 text-[#1F304F]"
             >
               <img
-                src="/src/assets/Group 783.svg"
+                src="/src/assets/Group783.svg"
                 alt="icon"
                 class="w-[32px] h-[32px] lg:w-[40px] lg:h-[40px]"
               />
