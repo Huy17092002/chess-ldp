@@ -2,6 +2,7 @@
 import { ref, computed, watch } from "vue";
 import { useRouter } from "vue-router";
 import { login } from "../stores/auth";
+import bgImage from "../assets/image/BG.png";
 
 const router = useRouter();
 
@@ -67,9 +68,10 @@ const handleLogin = () => {
       </div>
 
       <!-- Form box -->
+
       <div
         class="rounded-2xl p-8 mt-10 bg-cover bg-center"
-        style="background-image: url(&quot;/src/assets/image/bg.png&quot;)"
+        :style="{ backgroundImage: `url(${bgImage})` }"
       >
         <form class="flex flex-col gap-5 max-w-[644px] mx-auto">
           <!-- PHONE -->

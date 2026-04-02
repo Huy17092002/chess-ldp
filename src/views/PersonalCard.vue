@@ -13,7 +13,7 @@
     <!-- CARD -->
     <div
       class="max-w-[1228px] mx-auto mt-8 md:mt-10 bg-cover bg-center"
-      style="background-image: url(&quot;/src/assets/image/bg.png&quot;)"
+      :style="{ backgroundImage: `url(${bgCard})` }"
     >
       <div
         class="max-w-[900px] mx-auto rounded-3xl px-5 md:px-10 lg:px-16 py-8 md:py-10 flex flex-col lg:flex-row gap-8 lg:gap-16 items-center lg:items-start"
@@ -88,3 +88,6 @@
     </div>
   </div>
 </template>
+<script>
+import bgCard from "../assets/image/BG.png";
+</script>

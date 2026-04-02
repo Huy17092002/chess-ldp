@@ -2,7 +2,7 @@
   <!-- HERO -->
   <section
     class="relative w-full min-h-[700px] xl:h-[900px] bg-no-repeat bg-cover bg-center"
-    style="background-image: url(&quot;/src/assets/image/bg_chess.png&quot;)"
+    :style="{ backgroundImage: `url(${bgChess})` }"
   >
     <div
       class="max-w-[1270px] mx-auto px-4 sm:px-6 md:px-[2rem] py-24 md:py-32 xl:py-[14rem] flex items-center"
@@ -29,7 +29,7 @@
 
         <!-- COUNTDOWN -->
         <div
-          class="w-full max-w-[521px] bg-white/80 backdrop-blur mt-6 md:mt-8 px-4 md:px-6 py-4 rounded-2xl shadow text-center"
+          class="w-full max-w-[521px] bg-[#E6FDFD] backdrop-blur mt-6 md:mt-8 px-4 md:px-6 py-4 rounded-2xl shadow text-center"
         >
           <p
             class="text-sm md:text-base text-[#333E53] mb-3 font-montserrat font-semibold"
@@ -135,3 +135,7 @@
     </div>
   </section>
 </template>
+
+<script setup>
+import bgChess from "../assets/image/bg_chess.png";
+</script>

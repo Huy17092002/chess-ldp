@@ -83,12 +83,8 @@
         >
           <!-- Background -->
           <div
-            class="absolute top-0 right-0 w-full lg:w-[707px] h-full bg-no-repeat"
-            style="
-              background: transparent
-                url(&quot;/src/assets/image/Mask.png&quot;) no-repeat;
-              background-size: cover;
-            "
+            class="absolute top-0 right-0 w-full lg:w-[707px] h-full bg-no-repeat bg-cover"
+            :style="{ backgroundImage: `url(${maskBg})` }"
           ></div>
 
           <!-- Content -->
@@ -128,3 +124,7 @@
     </div>
   </section>
 </template>
+
+<script setup>
+import maskBg from "../assets/image/Mask.png";
+</script>

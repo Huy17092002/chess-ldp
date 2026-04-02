@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed } from "vue";
+import bgCard from "../assets/image/BG.png";
 
 const showPassword = ref(false);
 
@@ -47,7 +48,7 @@ const handleSubmit = () => {
       <!-- Form -->
       <div
         class="rounded-2xl p-8 mt-10 bg-cover bg-center"
-        style="background-image: url(&quot;/src/assets/image/BG.png&quot;)"
+        :style="{ backgroundImage: `url(${bgCard})` }"
       >
         <form
           @submit.prevent="handleSubmit"
